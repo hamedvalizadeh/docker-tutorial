@@ -1,0 +1,16 @@
+docker run -d --name my-redis-stack -p 6379:6379  redis/redis-stack-server:latest
+
+
+
+docker exec -it 885 sh
+redis-cli
+
+
+127.0.0.1:6379>ping
+PONG
+
+docker run -d --name my-redis-stack -p 6379:6379 -v /Users/my-redis/:/data -e REDIS_ARGS="--requirepass your_password_here --appendonly yes" redis/redis-stack-server:latest
+
+
+
+auth 123
