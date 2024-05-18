@@ -14,7 +14,7 @@ docker uses client-server architecture. there is an app that is running in clien
 
 ### Docker Daemon (dockerd)
 
-this is the app which is running in host machine and is responsible of managing and creating images, containers, networks, and volumes. this app listens to the client API requests and execute the appropriate command in docker engine. 
+this is the app which is running in host machine and is responsible of managing and creating images, containers, networks, and volumes. this app listens to the client API requests and execute the appropriate command in docker engine. there is a config file for it, that reside in `~/.docker/daemon.json` or `/etc/docker/deamon.json`.
 
 
 
