@@ -44,6 +44,28 @@ now everything is ready to install the docker. so run the following command:
 
 
 
+now to be able to pull docker images, it is recommended to change docker image hub repository to somewhere which is not banned. one of the possible mirror repository available among many possible ones could be for `arvancload` (based of link `https://www.arvancloud.ir/fa/dev/docker`). so do the following:
+
+- first change registry in `daemon.json`, by executing following command:
+
+- ```
+  sudo bash -c 'cat > /etc/docker/daemon.json <<EOF
+  {
+    "insecure-registries" : ["https://docker.arvancloud.ir"],
+    "registry-mirrors": ["https://docker.arvancloud.ir"]
+  }
+  EOF'
+  ```
+
+- then execute following command for changes to be applied:
+
+- ```
+  docker logout
+  sudo systemctl restart docker
+  ```
+
+  
+
 after installing docker, to test it is installed correctly, run the following command:
 
 - docker run hello-world
