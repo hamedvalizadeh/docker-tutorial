@@ -1,4 +1,4 @@
-# Install Docker
+# Install Docker in Debian
 
 as some distro maintainers include some unofficial packages in their Linux distribution, it is recommended to uninstall those packages before installing the docker. so run the following command to uninstall them:
 
@@ -70,6 +70,10 @@ after installing docker, to test it is installed correctly, run the following co
 
 - docker run hello-world
   - When the container runs, it prints a confirmation message and exits.
+
+
+
+**HINT:** for Ubuntu refer to https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository
 
 
 
